@@ -23,7 +23,7 @@ useEffect(() => {
     <div className='homePage'>
       {postList.map((post) => {
         return (
-          <div className='postContents'>
+          <div className='postContents' key={post.id}>
         <div className='postHeader'>
           <h1>{post.title}</h1>
         </div>
