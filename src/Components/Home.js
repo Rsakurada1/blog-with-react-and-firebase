@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./home.css";
 import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 
 const Home = () => {
 
@@ -13,8 +13,10 @@ useEffect(() => {
 /*     console.log(data);
     console.log(data.docs.map((doc) => ({doc})));
     console.log(data.docs.map((doc) => ({...doc.data(), id: doc.id}))); */
-    /* console.log(data.docs.map((doc) => ({...doc.data(), id: doc.id}))); */
+    console.log(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
     setPostList(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+    
+    
   };
   getPosts();
 }, []);
@@ -34,8 +36,10 @@ const handleDelete = async (id) => {
         </div>
       <div className='postTextContainer'>{post.postsText}</div>
       <div className='nameAndDeleteButton'>
-        <h3>@{post.auther?.username}</h3>
+        <h3>@{post.auther.username}</h3>
+        { post.auther.id === auth.currentUser?.uid && (
         <button onClick={ () => handleDelete(post.id)}>削除</button>
+        )}
         </div>
       </div>
         );
