@@ -44,6 +44,8 @@ const CreatePost = ({ isAuth }) => {
           <textarea placeholder='投稿内容を記入'
           onChange={(e) => setPostText(e.target.value)}
           ></textarea>
+          <div>
+          </div>
         </div>
         <button className='postButton' onClick={createPost}>投稿する</button>
       </div>

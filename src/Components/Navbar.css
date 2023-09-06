@@ -3,18 +3,18 @@ nav {
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: rgb(233, 139, 15);
+    background-color: #C4DFDF;
     gap: 45px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: all 0.3s;
 }
 
 nav a:hover{
-    color: cadetblue;
+    color: rgb(147, 151, 151);
 }
 nav a svg {
     margin-right: 5px;

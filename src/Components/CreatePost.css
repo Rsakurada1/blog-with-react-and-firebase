@@ -14,11 +14,9 @@
     height: 400px;
     width: 500px;
     gap: 10px;
-    padding: 0px 40px;
-    -moz-box-shadow: 5px 3px 6px 3px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 5px 3px 6px 3px rgba(0, 0, 0, 0.8);
-    -ms-box-shadow: 5px 3px 6px 3px rgba(0, 0, 0, 0.8);
-    box-shadow: 5px 3px 6px 3px rgba(0, 0, 0, 0.8);
+    padding: 40px 40px;
+    border: 1px;
+    border-color: #868686;
 }
 
 .postContainer h1 {
@@ -41,10 +39,9 @@
 
 .postButton {
     padding: 10px 0;
-    background-color: rgb(92, 185, 185);
+    background-color: #E3F4F4;
     border: none;
-    box-shadow: 5px 9px 15px -5px #777;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
